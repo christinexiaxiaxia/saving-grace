@@ -1,0 +1,277 @@
+@font-face {
+	font-family: IKOB;
+	src: url("../fonts/happy-times-at-the-ikob.otf");
+	font-style: normal;
+}
+@font-face {
+	font-family: IKOB;
+	src: url("../fonts/happy-times-at-the-ikob_italic.otf");
+	font-style: italic;
+}
+
+@font-face {
+	font-family: Dala Floda;
+	src: url("../fonts/DalaFlodaRoman.otf");
+	font-style: normal;
+}
+@font-face {
+	font-family: Dala Floda;
+	src: url("../fonts/DalaFlodaItalic.otf");
+	font-style: italic;
+}
+
+
+
+@keyframes fade-in {
+	0% {color: white;}
+	100% {color: black;}
+}
+
+/*@keyframes opacity-undulate {
+	0% {opacity: 1.0;}
+	50% {opacity: 0.7;}
+	100% {opacity: 1.0;}
+}
+
+@keyframes opacity-undulate2 {
+	0% {opacity: 0.8;}
+	50% {opacity: 0.6;}
+	100% {opacity: 0.8;}
+}
+
+@keyframes blur-undulate {
+	0% {filter: blur(0.3px);}
+	50% {filter: blur(2px)}
+	100% {filter: blur(0.3px)}
+}
+
+@keyframes blur-undulate2 {
+	0% {filter: blur(0.2px);}
+	50% {filter: blur(1px)}
+	100% {filter: blur(0.2px)}
+}*/
+
+
+
+
+/* GENERAL STUFF */
+
+* {
+	cursor: crosshair;
+	user-select: none;
+}
+
+body {
+	background-color: white;
+	font-family: Dala Floda;
+	font-size: 1.5rem;
+
+	transition-duration: 2s;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.indent {
+	margin-left: 3rem;
+}
+
+
+
+
+
+/* LAYOUT */
+
+.wrapper {
+	width: 100%;
+	height: 100%;
+
+	mix-blend-mode: multiply;
+}
+
+.board {
+	position: fixed;
+	display: grid;
+	grid-gap: 0px;	
+	grid-template: 3fr 1fr / 1fr; /* ROWS / COLUMNS */
+	top: 0px;
+	left: 0px;
+	
+	width: calc(100% - 8rem);
+	height: calc(100vh - 10rem);
+	margin: 4rem;
+
+	z-index: -1;
+}
+
+.box-wrapper {
+	display: grid;
+	grid-gap: 4rem;	
+	grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr 1fr; /* ROWS / COLUMNS */
+	width: 100%;
+	height: 33.3%;
+	margin-top: 25vh;
+}
+
+.box {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+
+	background-color: white;
+	opacity: 0.6;
+	filter: blur(50px);
+
+	transition-duration: 1.8s;
+}
+
+
+
+
+/* START SCREEN */
+
+.start-screen {
+	margin-top: 0rem;
+	margin-left: 3rem;
+
+
+	transition-duration: 1.5s;
+
+	z-index: 1000;
+}
+
+.title {
+	font-size: 3rem;
+	font-style: italic;
+
+	filter: blur(6px);
+
+	transition-duration: 1.8s;
+	animation: fade-in 4s;
+}
+
+.title:hover {
+	transition-duration: 1.8s;
+}
+
+.instructions {
+	position: absolute;
+	bottom: 1rem;
+
+	font-size: 2.5rem;
+}
+
+.line1 {
+	filter: blur(6px);
+
+	transition-duration: 1.8s;
+	animation: fade-in 7s;
+}
+
+.line1:hover {
+	transition-duration: 1.8s;
+}
+
+.line2 {
+	filter: blur(6px);
+
+	transition-duration: 1.8s;
+	animation: fade-in 10s;
+}
+
+.line2:hover {
+	transition-duration: 1.8s;
+}
+
+
+
+
+
+/* FOOTER TEXT */
+
+.footer {
+	position: fixed;
+	display: grid;
+	grid-template: 1fr / 22rem 1fr 22rem; /* ROWS / COLUMNS */
+	align-items: end;
+	left: 3.7rem;
+	right: 3rem;
+	bottom: 3rem;
+
+	font-family: IKOB;
+	font-size: 1rem;
+	line-height: 1.3rem;
+
+	color: white;
+
+	z-index: -1;
+}
+
+.footer a {
+	color: white;
+	cursor: alias;
+}
+
+.footer-instructions {
+	bottom: 0px;
+}
+
+.footer-info {
+}
+
+.footer-title {
+	font-family: Dala Floda;
+	font-size: 1rem;
+	letter-spacing: 0.5px;
+}
+
+.footer-title-left {
+	font-size: 1.5rem;
+
+	filter: blur(2px);
+	transition-duration: 1.8s;
+}
+
+.footer-title-left:hover {
+	filter: blur(0.3px);
+	transition-duration: 1.8s;
+}
+
+.footer-title-right {
+	font-style: italic;
+	text-align: right;
+
+	filter: blur(2px);
+	transition-duration: 1.8s;
+}
+
+.footer-title-right:hover {
+	filter: blur(0.3px);
+	transition-duration: 1.8s;
+}
+
+.footer-text {
+	filter: blur(3px);
+	opacity: 0;
+	transition-duration: 1.8s;
+}
+
+
+
+/* CURSOR */
+
+.cursor {
+	position: fixed;
+}
+
+img {
+	image-rendering: pixelated;
+}
+
+
+
+
+
+
